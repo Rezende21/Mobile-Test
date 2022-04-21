@@ -2,18 +2,23 @@ package com.example.mobiletest
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupActionBarWithNavController
+import android.widget.Toast
+import androidx.navigation.fragment.NavHostFragment
+import com.example.mobiletest.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var navHostFragment : NavHostFragment
+    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setupActionBarWithNavController(findNavController(R.id.fragment))
+        setContentView(binding.root)
+        initFragment()
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.fragment)
-        return navController.navigateUp() || super.onSupportNavigateUp()
+    private fun initFragment() {
+        navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_controler) as NavHostFragment
+        navHostFragment.navController
     }
 }

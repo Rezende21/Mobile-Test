@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Gabriel/AndroidStudioProjects/Mobile-Test/app/src/main/res/drawable/ic_add_24.xml" value="0.3675" />
+        <entry key="..\:/Users/Gabriel/AndroidStudioProjects/Mobile-Test/app/src/main/res/layout/activity_main.xml" value="0.334384858044164" />
+        <entry key="..\:/Users/Gabriel/AndroidStudioProjects/Mobile-Test/app/src/main/res/layout/fragment_add.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Gabriel/AndroidStudioProjects/Mobile-Test/app/src/main/res/layout/fragment_details.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Gabriel/AndroidStudioProjects/Mobile-Test/app/src/main/res/layout/fragment_list.xml" value="0.33" />
+        <entry key="..\:/Users/Gabriel/AndroidStudioProjects/Mobile-Test/app/src/main/res/layout/listview_recycleview.xml" value="0.36666666666666664" />
+      </map>
+    </option>
   </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

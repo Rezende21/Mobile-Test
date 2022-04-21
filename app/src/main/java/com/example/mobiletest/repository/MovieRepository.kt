@@ -1,15 +1,16 @@
 package com.example.mobiletest.repository
 
-import androidx.lifecycle.LiveData
-import com.example.mobiletest.data.Movie
-import com.example.mobiletest.data.MovieDao
+import com.example.mobiletest.apiMovie.Module
+import com.example.mobiletest.apiMovie.ServiceApi
+import com.example.mobiletest.model.MovieApi
+import com.example.mobiletest.model.Results
+import retrofit2.Response
 
-class MovieRepository(private val movieDao: MovieDao) {
 
-    val readAllData: LiveData<List<Movie>> = movieDao.readAllData()
+class MovieRepository {
 
-    suspend fun addMovie(movie: Movie) {
-        movieDao.addMovie(movie)
+    suspend fun listMovie(): Response<Results> {
+       return Module.api.listMovie()
     }
 
 }
