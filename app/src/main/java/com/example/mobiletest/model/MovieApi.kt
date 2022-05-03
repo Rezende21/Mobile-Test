@@ -7,9 +7,6 @@ data class MovieApi(
     @SerializedName("poster_path")
     val poster_path : String,
 
-    @SerializedName("adult")
-    val adult : Boolean,
-
     @SerializedName("overview")
     val overview : String,
 
@@ -25,6 +22,10 @@ data class MovieApi(
     @SerializedName("title")
     val title : String,
 
-//    @SerializedName("vote_average")
-//    val vote_average : Byte
+    @SerializedName("vote_average")
+    val vote_average : Double,
+
+    @SerializedName("video")
+    val video : Boolean
+
 ) : Serializable

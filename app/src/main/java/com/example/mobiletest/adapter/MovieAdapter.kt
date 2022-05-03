@@ -1,5 +1,7 @@
 package com.example.mobiletest.adapter
 
+import android.util.Log
+import android.util.Log.ASSERT
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -7,14 +9,15 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobiletest.databinding.ListviewRecycleviewBinding
 import com.example.mobiletest.model.MovieApi
+import com.example.mobiletest.utis.Constants.TAG
 import com.example.mobiletest.utis.loadImage
 
-class MovieAdapter : ListAdapter<MovieApi, MovieAdapter.MyViewHolder>(DiffCallback()) {
+class MovieAdapter(
+    private val onMovieClik : (MovieApi) -> Unit
+) : ListAdapter<MovieApi, MovieAdapter.MyViewHolder>(DiffCallback()) {
 
     class MyViewHolder(private val binding: ListviewRecycleviewBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(item: MovieApi) {
-            binding.txttitle.text = item.title
-            binding.txtrelase.text = item.release_date
             loadImage(binding.imageView, item.poster_path)
         }
     }
@@ -27,6 +30,9 @@ class MovieAdapter : ListAdapter<MovieApi, MovieAdapter.MyViewHolder>(DiffCallba
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currenItem = getItem(position)
+        holder.itemView.setOnClickListener {
+            onMovieClik(currenItem)
+        }
         holder.bind(currenItem)
     }
 

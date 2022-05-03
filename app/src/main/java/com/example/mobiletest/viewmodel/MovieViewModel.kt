@@ -8,6 +8,7 @@ import kotlinx.coroutines.launch
 import retrofit2.Response
 
 class MovieViewModel() : ViewModel() {
+
     private val repository = MovieRepository()
     val responsabilidade : MutableLiveData<Response<Results>> = MutableLiveData()
 
@@ -18,14 +19,4 @@ class MovieViewModel() : ViewModel() {
               responsabilidade.value = response
         }
     }
-
-//    class Factory(val repository: MovieRepository) : ViewModelProvider.Factory {
-//        override fun <T : ViewModel> create(modelClass: Class<T>): T {
-//            if (modelClass.isAssignableFrom(MovieViewModel::class.java)) {
-//                return MovieViewModel(repository) as T
-//            }
-//            throw IllegalAccessException("Unable to construct MovieVewModel")
-//        }
-//
-//    }
 }

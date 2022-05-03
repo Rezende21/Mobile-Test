@@ -13,4 +13,8 @@ class MovieRepository {
        return Module.api.listMovie()
     }
 
+    suspend fun fetch(id: Int) : Response<MovieApi> {
+        return Module.api.getMovie(id)
+    }
+
 }
