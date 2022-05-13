@@ -2,6 +2,7 @@ package com.example.mobiletest.model
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
+import java.sql.Array
 
 data class MovieApi(
     @SerializedName("poster_path")
@@ -25,7 +26,7 @@ data class MovieApi(
     @SerializedName("vote_average")
     val vote_average : Double,
 
-    @SerializedName("video")
-    val video : Boolean
+    @SerializedName("videos")
+    val videos : VideoResults,
 
-) : Serializable
+    ) : Serializable

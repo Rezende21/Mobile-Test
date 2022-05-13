@@ -1,7 +1,6 @@
 package com.example.mobiletest.repository
 
 import com.example.mobiletest.apiMovie.Module
-import com.example.mobiletest.apiMovie.ServiceApi
 import com.example.mobiletest.model.MovieApi
 import com.example.mobiletest.model.Results
 import retrofit2.Response
@@ -13,8 +12,8 @@ class MovieRepository {
        return Module.api.listMovie()
     }
 
-    suspend fun fetch(id: Int) : Response<MovieApi> {
-        return Module.api.getMovie(id)
+    suspend fun fetch(id: Int, API_KEY : String, TAG : String) : Response<MovieApi> {
+        return Module.api.getMovie(id, API_KEY, TAG)
     }
 
 }

@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobiletest.databinding.ListviewRecycleviewBinding
 import com.example.mobiletest.model.MovieApi
-import com.example.mobiletest.utis.Constants.TAG
 import com.example.mobiletest.utis.loadImage
 
 class MovieAdapter(

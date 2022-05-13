@@ -7,6 +7,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
+import retrofit2.http.QueryMap
 
 interface ServiceApi {
 
@@ -18,6 +19,7 @@ interface ServiceApi {
     @GET("movie/{movie_id}")
     suspend fun getMovie(
         @Path("movie_id") movie_id : Int,
-        @Query("api_key") api_key : String = API_KEY
+        @Query("api_key") api_key : String,
+        @Query("append_to_response") append_to_response : String
     ) : Response<MovieApi>
 }
