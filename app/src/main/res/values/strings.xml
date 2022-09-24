@@ -6,4 +6,8 @@
     <string name="description">Description of the movie</string>
     <string name="poster_movie">poster of the movie</string>
     <string name="ic_star">ic star volte</string>
+
+    <string name="favorito_menu">Favorito</string>
+    <string name="filme_menu">Filme</string>
+    <string name="serie_menu">Serie</string>
 </resources>

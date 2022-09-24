@@ -1,14 +1,12 @@
 package com.example.mobiletest.adapter
 
-import android.util.Log
-import android.util.Log.ASSERT
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobiletest.databinding.ListviewRecycleviewBinding
-import com.example.mobiletest.model.MovieApi
+import com.example.mobiletest.data.remote.MovieApi
 import com.example.mobiletest.utis.loadImage
 
 class MovieAdapter(

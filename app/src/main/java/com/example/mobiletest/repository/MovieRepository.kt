@@ -1,19 +1,16 @@
 package com.example.mobiletest.repository
 
-import com.example.mobiletest.apiMovie.Module
-import com.example.mobiletest.model.MovieApi
-import com.example.mobiletest.model.Results
-import retrofit2.Response
+import androidx.lifecycle.LiveData
+import com.example.mobiletest.data.local.Movie
+import com.example.mobiletest.data.remote.MovieApi
+import com.example.mobiletest.data.remote.Results
+import com.example.mobiletest.state.ResourceState
 
+interface MovieRepository {
 
-class MovieRepository {
+    suspend fun addMovieToDB(movie : Movie)
+    fun listAllMovieFromDB() : LiveData<List<Movie>>
 
-    suspend fun listMovie(): Response<Results> {
-       return Module.api.listMovie()
-    }
-
-    suspend fun fetch(id: Int, API_KEY : String, TAG : String) : Response<MovieApi> {
-        return Module.api.getMovie(id, API_KEY, TAG)
-    }
-
+    suspend fun listAllMovieFromApi() : ResourceState<Results>
+    suspend fun getSingleMovieFromApi(movieId : String) : ResourceState<MovieApi>
 }

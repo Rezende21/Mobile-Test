@@ -1,8 +1,7 @@
-package com.example.mobiletest.model
+package com.example.mobiletest.data.remote
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
-import java.sql.Array
 
 data class MovieApi(
     @SerializedName("poster_path")

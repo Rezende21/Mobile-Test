@@ -1,4 +1,4 @@
-package com.example.mobiletest.model
+package com.example.mobiletest.data.remote
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
