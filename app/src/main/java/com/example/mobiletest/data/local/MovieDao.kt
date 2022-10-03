@@ -1,10 +1,7 @@
 package com.example.mobiletest.data.local
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface MovieDao {
@@ -14,4 +11,7 @@ interface MovieDao {
 
     @Query("SELECT * FROM Movie ORDER bY id ASC")
     fun readAllData() : LiveData<List<Movie>>
+
+    @Delete
+    suspend fun deleteMovie(movie: Movie)
 }

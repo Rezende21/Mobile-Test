@@ -26,6 +26,6 @@ data class MovieApi(
     val vote_average : Double,
 
     @SerializedName("videos")
-    val videos : VideoResults,
+    val videos : VideoResults?,
 
     ) : Serializable

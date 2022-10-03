@@ -56,7 +56,7 @@ class DetailsFragment : Fragment(){
                     binding.detailsMovieDetails.text = it.data?.overview
                     binding.voteDetails.text = it.data?.vote_average.toString()
                     loadImage(binding.posterDetails, it.data!!.poster_path)
-                    keyToVideo = it.data.videos.results.toTypedArray()
+                    keyToVideo = it.data.videos?.results!!.toTypedArray()
 
                     addYoutubeMediaPleyer()
                 }

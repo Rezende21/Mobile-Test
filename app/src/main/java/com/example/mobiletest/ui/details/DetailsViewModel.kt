@@ -1,6 +1,6 @@
 package com.example.mobiletest.ui.details
 
-import android.util.Log
+
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -22,7 +22,7 @@ class DetailsViewModel @Inject constructor(
     val result : LiveData<ResourceState<MovieApi>> = _result
 
     fun fech(movieId: String) {
-        if (movieId.isEmpty()) {
+        if (movieId.isEmpty() || movieId.isBlank()) {
             ResourceState.Error("Selecione o filme novamente Pfv", null)
         } else {
             _result.value = ResourceState.Loading()
